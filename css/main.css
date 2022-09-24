@@ -3,6 +3,15 @@
     border: 1px solid #919191;
     width: 100px;
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checker{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 1px solid #252525;
 }
 #grid{
     display: grid;

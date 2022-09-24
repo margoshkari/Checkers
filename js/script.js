@@ -5,10 +5,23 @@ window.onload = () => {
 
 function CreateElements() {
   var grid = document.getElementById("grid");
-  for (let index = 0; index < 64; index++) {
-    const newDiv = document.createElement("div");
-    newDiv.className = "block";
-    grid.appendChild(newDiv);
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+      const newDiv = document.createElement("div");
+      newDiv.className = "block";
+      if (i < 3 || i > 4) {
+        if ((i % 2 == 0 && j % 2 != 0) || (i % 2 != 0 && j % 2 == 0)) {
+          const checker = document.createElement("div");
+          checker.className = "checker";
+          i < 3
+            ? (checker.style = "background-color: #131313;")
+            : (checker.style = "background-color: #FDFDFD;");
+          newDiv.appendChild(checker);
+        }
+      }
+
+      grid.appendChild(newDiv);
+    }
   }
 }
 function FillSquares() {
