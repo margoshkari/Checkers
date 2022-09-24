@@ -1,0 +1,15 @@
+.block{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #919191;
+    width: 100px;
+    height: 100px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
